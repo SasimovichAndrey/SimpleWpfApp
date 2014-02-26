@@ -19,14 +19,17 @@ namespace SimpleWpfApp
     /// </summary>
     public partial class MainWindow : Window
     {
+        private Model.Unit unit = new Model.Grunt("Zag, zag!");
+        public List<Model.Unit> unitList = new List<Model.Unit>();
+
         public MainWindow()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, RoutedEventArgs e)
-        {
-            textBox1.Text = "Hello, WPF!";
+            for(int i =0; i < 5; i++)
+            {
+                unitList.Add(new Model.Grunt());
+            }
+            this.DataContext = unitList;
         }
     }
 }
