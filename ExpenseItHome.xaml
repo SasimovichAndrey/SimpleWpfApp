@@ -28,7 +28,7 @@
         <ListBox Name="peopleListBox" Grid.Column="1" Grid.Row="2">
             <ListBoxItem>Mike</ListBoxItem>
             <ListBoxItem>Lisa</ListBoxItem>
-            <ListBoxItem>John</ListBoxItem>
+            <ListBoxItem>Bob</ListBoxItem>
             <ListBoxItem>Mary</ListBoxItem>
         </ListBox>
 
