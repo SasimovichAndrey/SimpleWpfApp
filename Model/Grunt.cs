@@ -10,12 +10,6 @@ namespace SimpleWpfApp.Model
         public Grunt() : base("Zag, zag!") { }
         public Grunt(String defaultPhrase) : base(defaultPhrase) { }
 
-        public override String UnitRace
-        {
-            get
-            {
-                return "Orc";
-            }
-        }
+        public override String UnitRace { get { return "Orc"; } }
     }
 }

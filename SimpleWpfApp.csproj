@@ -63,6 +63,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="FiringField.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -71,11 +75,15 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Converters\StringEmployeeConverter.cs" />
     <Compile Include="ExpenseItHome.xaml.cs">
       <DependentUpon>ExpenseItHome.xaml</DependentUpon>
     </Compile>
     <Compile Include="ExpenseItReport.xaml.cs">
       <DependentUpon>ExpenseItReport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FiringField.xaml.cs">
+      <DependentUpon>FiringField.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -83,7 +91,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Employee.cs" />
     <Compile Include="Model\Grunt.cs" />
+    <Compile Include="Model\SourceClass.cs" />
     <Compile Include="Model\Unit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
