@@ -3,6 +3,23 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <Style x:Key="appButtonDefaultStyle" TargetType="{x:Type Button}">
+            <Setter Property="MinHeight" Value="30" />
+            <Setter Property="MinWidth" Value="100" />
+        </Style>
+        <!-- Label style -->
+        <Style x:Key="labelStyle" TargetType="{x:Type Label}">
+            <Setter Property="VerticalAlignment" Value="Top" />
+            <Setter Property="HorizontalAlignment" Value="Left" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="Margin" Value="0,0,0,5" />
+        </Style>
+        <!-- DataGrid header style -->
+        <Style x:Key="columnHeaderStyle" TargetType="{x:Type DataGridColumnHeader}">
+            <Setter Property="Height" Value="35" />
+            <Setter Property="Padding" Value="5" />
+            <Setter Property="Background" Value="#4E87D4" />
+            <Setter Property="Foreground" Value="White" />
+        </Style>
     </Application.Resources>
 </Application>

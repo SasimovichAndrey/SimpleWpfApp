@@ -27,9 +27,13 @@ namespace SimpleWpfApp
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             // View Expense Report
-            ExpenseItReport expenseReportPage = new ExpenseItReport();
+            ExpenseItReport expenseReportPage = new ExpenseItReport(this.peopleListBox.SelectedItem);
             this.NavigationService.Navigate(expenseReportPage);
 
         }
+        //private void Button2_Click(object sender, RoutedEventArgs e)
+        //{
+        //    MessageBox.Show(Grid.ActualHeight.ToString() + " " + Grid.RowDefinitions[4].ActualHeight + " " + Grid.RowDefinitions[4].Height);
+        //}
     }
 }
