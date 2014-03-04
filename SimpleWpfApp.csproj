@@ -55,6 +55,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="CollectionBindingTestPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ExpenseItHome.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -63,7 +67,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="FiringField.xaml">
+    <Page Include="BindingTestPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -75,6 +79,9 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="CollectionBindingTestPage.xaml.cs">
+      <DependentUpon>CollectionBindingTestPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Converters\StringEmployeeConverter.cs" />
     <Compile Include="ExpenseItHome.xaml.cs">
       <DependentUpon>ExpenseItHome.xaml</DependentUpon>
@@ -82,8 +89,8 @@
     <Compile Include="ExpenseItReport.xaml.cs">
       <DependentUpon>ExpenseItReport.xaml</DependentUpon>
     </Compile>
-    <Compile Include="FiringField.xaml.cs">
-      <DependentUpon>FiringField.xaml</DependentUpon>
+    <Compile Include="BindingTestPage.xaml.cs">
+      <DependentUpon>BindingTestPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -92,7 +99,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\Employee.cs" />
+    <Compile Include="Model\EmployeeList.cs" />
     <Compile Include="Model\Grunt.cs" />
+    <Compile Include="Model\SimpleClass.cs" />
     <Compile Include="Model\SourceClass.cs" />
     <Compile Include="Model\Unit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">

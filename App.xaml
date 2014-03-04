@@ -31,6 +31,7 @@
         </Style>
         <c:SourceClass x:Key="SourceClass"/>
         <c:Employee x:Key="Employee"/>
+        <c:EmployeeWrapper x:Key="SimpleClass"/>
         <conv:StringEmployeeConverter x:Key="StringEmployeeConverter"/>
     </Application.Resources>
 </Application>

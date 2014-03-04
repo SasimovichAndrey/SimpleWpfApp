@@ -9,29 +9,44 @@ namespace SimpleWpfApp.Model
     class SourceClass
     {
         private static System.Windows.Media.Brush color = System.Windows.Media.Brushes.Red;
-        private static Employee staticEmployee = new Employee() { FirstName = "Gerd", SecondName ="Muller"};
 
-        public static Employee StaticEmployee
+        private static String someString = "lalala";
+
+        public static String SomeString
         {
             get
             {
-                return staticEmployee;
+                return someString;
             }
             set
             {
-                staticEmployee = value;
+                someString = value;
             }
         }
+
+        //private static Employee staticEmployee = new Employee() { FirstName = "Gerd", SecondName ="Muller"};
+
+        //public static Employee StaticEmployee
+        //{
+        //    get
+        //    {
+        //        return staticEmployee;
+        //    }
+        //    set
+        //    {
+        //        staticEmployee = value;
+        //    }
+        //}
         public static System.Windows.Media.Brush Color
         {
             get
             {
                 return color;
             }
-            set 
+            set
             {
                 color = value;
-                
+
             }
         }
     }
