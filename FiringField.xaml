@@ -6,7 +6,7 @@
       mc:Ignorable="d" 
       Style="{StaticResource ResourceKey=DefaultPageStyle}"
 	Title="FiringField">
-    <Grid>
+    <Grid x:Name="PageGrid">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
@@ -18,9 +18,7 @@
         </Grid.RowDefinitions>
         <Button Height="100" Background="{Binding Source={StaticResource SourceClass}, Path=Color}" x:Name="BigButton" Grid.Row="0">Big</Button>
         <Button x:Name="SmallButton" Grid.Row="1" Height="{Binding ElementName=BigButton, Path=ActualHeight}">Small</Button>
-        <TextBox Height="30" Grid.Row="2" Text="{Binding Source={StaticResource SourceClass}, Path=StaticEmployee, UpdateSourceTrigger=LostFocus, Mode=TwoWay, Converter={StaticResource StringEmployeeConverter}}"></TextBox>
-        <Label Grid.Row="3" Background="White" Width="100" Height="30">
-            <Binding Source="{StaticResource SourceClass}" Path="StaticEmployee" Converter="{StaticResource StringEmployeeConverter}" Mode="TwoWay"/>
-        </Label>
+        <TextBox Height="30" Grid.Row="2" x:Name="BindingTextBox"/>
+        <Label Grid.Row="3" Background="White" Width="100" Height="30" x:Name="BindingLabel"/>
     </Grid>
 </Page>

@@ -30,6 +30,7 @@
             <Setter Property="MinWidth" Value="300"/>
         </Style>
         <c:SourceClass x:Key="SourceClass"/>
+        <c:Employee x:Key="Employee"/>
         <conv:StringEmployeeConverter x:Key="StringEmployeeConverter"/>
     </Application.Resources>
 </Application>
