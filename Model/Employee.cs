@@ -6,12 +6,23 @@ using System.ComponentModel;
 
 namespace SimpleWpfApp.Model
 {
-    public class Employee : INotifyPropertyChanged
+    public class Employee
     {
         private String firstName;
         private String secondName;
+        private EmployeePosition position = EmployeePosition.Developer;
 
-        public event PropertyChangedEventHandler PropertyChanged;
+        public EmployeePosition Position
+        {
+            get
+            {
+                return position;
+            }
+            set
+            {
+                this.position = value;
+            }
+        }
 
         public String SecondName
         {
@@ -22,7 +33,6 @@ namespace SimpleWpfApp.Model
             set
             {
                 this.secondName = value;
-                ChangedNotify("SecondName");
             }
         }
 
@@ -35,16 +45,14 @@ namespace SimpleWpfApp.Model
             set
             {
                 this.firstName = value;
-                ChangedNotify("FirstName");
             }
         }
+    }
 
-        protected void ChangedNotify(String propertyName)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-            }
-        }
+    public enum EmployeePosition
+    {
+        Developer,
+        Manager,
+        Tester
     }
 }

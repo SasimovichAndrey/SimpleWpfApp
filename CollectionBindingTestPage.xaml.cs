@@ -25,9 +25,10 @@ namespace SimpleWpfApp
         {
             InitializeComponent();
             List<Employee> list = new List<Employee>();
-            list.Add(new Employee() { FirstName = "AEvgeny", SecondName = "Solovyov" });
+            list.Add(new Employee() { FirstName = "AEvgeny", SecondName = "Solovyov", Position = EmployeePosition.Manager });
             list.Add(new Employee() { FirstName = "ZWasia", SecondName = "Ozboarne" });
             list.Add(new Employee() { FirstName = "CMichael", SecondName = "Smith" });
+            list.Add(new Employee() { FirstName = "CMichael", SecondName = "Abboth", Position = EmployeePosition.Manager});
             list.Add(new Employee() { FirstName = "BWasia", SecondName = "Kovalev" });
             EmployeeList emplList = new EmployeeList(){List = list};
 
@@ -37,6 +38,7 @@ namespace SimpleWpfApp
         private void AddSorting(object sender, RoutedEventArgs e)
         {
             ((CollectionViewSource)this.Resources["VSource"]).SortDescriptions.Add(new SortDescription("FirstName", ListSortDirection.Ascending));
+            ((CollectionViewSource)this.Resources["VSource"]).SortDescriptions.Add(new SortDescription("SecondName", ListSortDirection.Ascending));
         }
 
         private void RemoveSorting(object sender, RoutedEventArgs e)
@@ -62,5 +64,17 @@ namespace SimpleWpfApp
         {
             ((CollectionViewSource)this.Resources["VSource2"]).Filter -= WasiaFilter;
         }
+
+        private void AddGrouping(object sender, RoutedEventArgs e)
+        {
+            ((CollectionViewSource)this.Resources["VSource"]).GroupDescriptions.Add(new PropertyGroupDescription() { PropertyName = "Position"});
+        }
+
+        private void RemoveGrouping(object sender, RoutedEventArgs e)
+        {
+            ((CollectionViewSource)this.Resources["VSource"]).GroupDescriptions.Clear();
+        }
+
+
     }
 }
