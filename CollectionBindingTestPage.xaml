@@ -5,17 +5,24 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       mc:Ignorable="d" 
       d:DesignHeight="300" d:DesignWidth="300"
-	Title="CollectionBindingTestPage">
-
+	Title="CollectionBindingTestPage" Background="White">
+    <Page.Resources>
+        <CollectionViewSource Source="{Binding Path=List}" x:Key="VSource"/>
+        <CollectionViewSource Source="{Binding Path=List}" x:Key="VSource2"/>
+    </Page.Resources>
     <Grid x:Name="PageGrid">
         <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <ListView ItemsSource="{Binding Path=List}">
-            
-        </ListView>
+        <ListBox ItemsSource="{Binding Source={StaticResource ResourceKey=VSource}}" ItemTemplate="{StaticResource employeeTemplate}" Grid.Column="0" Grid.Row="0"/>
+        <ListBox ItemsSource="{Binding Source={StaticResource ResourceKey=VSource2}}" ItemTemplate="{StaticResource employeeTemplate}" Grid.Column="1" Grid.Row="0"/>
+        <CheckBox Checked="AddSorting" Unchecked="RemoveSorting" x:Name="SortLeftListButton" Grid.Column="0" Grid.Row="1">Sort</CheckBox>
+        <CheckBox Checked="AddFiltering" Unchecked="RemoveFiltering" x:Name="FilterLeftListButton" Grid.Column="0" Grid.Row="2">Filter Wasia</CheckBox>
     </Grid>
 </Page>

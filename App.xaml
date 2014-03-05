@@ -29,6 +29,21 @@
             <Setter Property="Width" Value="Auto"/>
             <Setter Property="MinWidth" Value="300"/>
         </Style>
+
+        <DataTemplate x:Key="employeeTemplate">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Content="{Binding Path=FirstName}" Grid.Column="0"/>
+                <Label Content="{Binding Path=SecondName}" Grid.Column="1"/>
+            </Grid>
+        </DataTemplate>
+
         <c:SourceClass x:Key="SourceClass"/>
         <c:Employee x:Key="Employee"/>
         <c:EmployeeWrapper x:Key="SimpleClass"/>
