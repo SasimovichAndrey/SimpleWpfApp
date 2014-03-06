@@ -12,6 +12,7 @@ namespace SimpleWpfApp.Model
         private String secondName;
         private EmployeePosition position = EmployeePosition.Developer;
 
+        #region Getters/Setters
         public EmployeePosition Position
         {
             get
@@ -47,6 +48,7 @@ namespace SimpleWpfApp.Model
                 this.firstName = value;
             }
         }
+        #endregion
     }
 
     public enum EmployeePosition

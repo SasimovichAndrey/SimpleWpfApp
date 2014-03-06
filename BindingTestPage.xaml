@@ -3,6 +3,7 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:val="clr-namespace:SimpleWpfApp.ValidationRules" 
       mc:Ignorable="d" 
       Style="{StaticResource ResourceKey=DefaultPageStyle}"
 	Title="FiringField">
@@ -18,7 +19,16 @@
         </Grid.RowDefinitions>
         <Button Height="100" Background="{Binding Source={StaticResource SourceClass}, Path=Color}" x:Name="BigButton" Grid.Row="0">Big</Button>
         <Button x:Name="SmallButton" Grid.Row="1" Height="{Binding ElementName=BigButton, Path=ActualHeight}">Small</Button>
-        <TextBox Height="30" Grid.Row="2" x:Name="BindingTextBoxWrapped" Text="{Binding Path=WrappedEmployee,Converter={StaticResource StringEmployeeConverter}, Mode=TwoWay}"/>
+        <TextBox Height="30" Grid.Row="2" x:Name="BindingTextBoxWrapped">
+            <TextBox.Text>
+                <Binding Path="WrappedEmployee" Converter="{StaticResource StringEmployeeConverter}" Mode="TwoWay">
+                    <Binding.ValidationRules>
+                        <val:StringEmployeeValidationRule/>
+                        <val:EmployeeValidationRule/>
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>
+        </TextBox>
         <Label Grid.Row="3" Background="White" Width="100" Height="30" x:Name="BindingLabel" Content="{Binding Path=WrappedEmployee,Converter={StaticResource StringEmployeeConverter}, Mode=TwoWay}"/>
     </Grid>
 </Page>

@@ -8,7 +8,7 @@
     <Grid Height="Auto" x:Name="Grid" Margin="10">
         <Grid.Resources>
             <!-- Expense Report Data -->
-            <XmlDataProvider x:Key="ExpenseDataSource" XPath="Expenses">
+            <XmlDataProvider x:Key="ExpenseDataSource">
                 <x:XData>
                     <Expenses xmlns="">
                         <Person Name="Mike" Department="Legal" Nickname="-=Bob=-">
@@ -50,7 +50,7 @@
         </Border>
 
         <ListBox Name="peopleListBox" Grid.Column="1" Grid.Row="2" 
-         ItemsSource="{Binding Source={StaticResource ExpenseDataSource}, XPath=Person}"
+         ItemsSource="{Binding Source={StaticResource ExpenseDataSource}, XPath=Expenses/Person}"
          ItemTemplate="{StaticResource nameItemTemplate}">
         </ListBox>
 

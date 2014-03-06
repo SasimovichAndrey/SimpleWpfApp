@@ -33,7 +33,7 @@
         <ListBox ItemsSource="{Binding Source={StaticResource ResourceKey=VSource2}}" ItemTemplate="{StaticResource employeeTemplate}" Grid.Column="1" Grid.Row="0"/>
         <CheckBox Checked="AddSorting" Unchecked="RemoveSorting" x:Name="SortLeftListButton" Grid.Column="0" Grid.Row="1">Sort</CheckBox>
         <CheckBox Checked="AddFiltering" Unchecked="RemoveFiltering" x:Name="FilterRightListButton" Grid.Column="0" Grid.Row="2">Filter Wasia</CheckBox>
-        <CheckBox Checked="AddGrouping" Unchecked="RemoveGrouping" x:Name="GroupLeftListButton" Grid.Column="0" Grid.Row="3">Group Wasia</CheckBox>
+        <CheckBox Checked="AddGrouping" Unchecked="RemoveGrouping" x:Name="GroupLeftListButton" Grid.Column="0" Grid.Row="3">Group by position</CheckBox>
         <Label Grid.Column="1" Grid.Row="1" Content="{Binding Source={StaticResource VSource2}, Path=/}" ContentTemplate="{StaticResource employeeTemplate}"/>
     </Grid>
 </Page>

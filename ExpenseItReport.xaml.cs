@@ -23,7 +23,7 @@ namespace SimpleWpfApp
         {
             InitializeComponent();
         }
-        public ExpenseItReport(object data):this()
+        public ExpenseItReport(object data) : this()
         {
             // Bind to expense report data.
             this.DataContext = data;

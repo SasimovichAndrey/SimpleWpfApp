@@ -26,7 +26,7 @@ namespace SimpleWpfApp
             InitializeComponent();
             List<Employee> list = new List<Employee>();
             list.Add(new Employee() { FirstName = "AEvgeny", SecondName = "Solovyov", Position = EmployeePosition.Manager });
-            list.Add(new Employee() { FirstName = "ZWasia", SecondName = "Ozboarne" });
+            list.Add(new Employee() { FirstName = "ZWasia", SecondName = "Osbourne" });
             list.Add(new Employee() { FirstName = "CMichael", SecondName = "Smith" });
             list.Add(new Employee() { FirstName = "CMichael", SecondName = "Abboth", Position = EmployeePosition.Manager});
             list.Add(new Employee() { FirstName = "BWasia", SecondName = "Kovalev" });

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using SimpleWpfApp.Model;
 using System.Windows.Data;
+using System.Windows;
 
 namespace SimpleWpfApp.Converters
 {
